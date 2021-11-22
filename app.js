@@ -30,11 +30,11 @@ window.addEventListener("load", () => {
           let celcius = (temperature - 32) * (5 / 9);
           setIcons(icon, document.querySelector(".icon"));
           temperatureSeciton.addEventListener("click", () => {
-            if (temperatureSpan.textContent === "F") {
-              temperatureSpan.textContent = "C";
+            if (temperatureSpan.textContent == "℉") {
+              temperatureSpan.textContent = "℃";
               temperatureDegree.textContent = celcius.toFixed(1);
             } else {
-              temperatureSpan.textContent = "F";
+              temperatureSpan.textContent = "℉";
               temperatureDegree.textContent = temperature;
             }
           });
