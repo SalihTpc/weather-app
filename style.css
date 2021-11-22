@@ -36,3 +36,10 @@ body {
 .degree-section h2 {
   font-size: 40px;
 }
+@media only screen and (max-width: 400px) {
+  .location {
+    flex-direction: column;
+    position: absolute;
+    top: 5vh;
+  }
+}
