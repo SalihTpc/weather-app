@@ -24,18 +24,18 @@ window.addEventListener("load", () => {
         })
         .then((data) => {
           const { temperature, summary, icon } = data.currently;
-          temperatureDegree.innerText = temperature;
-          temperatureDescription.innerHTML = summary;
-          locationTimezone.innerHTML = data.timezone.split("/")[1];
+          temperatureDegree.textContent = temperature;
+          temperatureDescription.textContent = summary;
+          locationTimezone.textContent = data.timezone.split("/")[1];
           let celcius = (temperature - 32) * (5 / 9);
           setIcons(icon, document.querySelector(".icon"));
           temperatureSeciton.addEventListener("click", () => {
             if (temperatureSpan.textContent === "F") {
               temperatureSpan.textContent = "C";
-              temperatureDegree.innerText = celcius.toFixed(1);
+              temperatureDegree.textContent = celcius.toFixed(1);
             } else {
               temperatureSpan.textContent = "F";
-              temperatureDegree.innerText = temperature;
+              temperatureDegree.textContent = temperature;
             }
           });
         });
